@@ -30,11 +30,11 @@ export const statsJewelry = () => {
 
 export const addJewelry = (jewelryId) => {
 	console.log(jewelryId + " add");
-	console.log('https://prac-marketplace.onrender.com/cart_jewelry/'+jewelryId+'/1');
+	
 	
 	return axios({
         method: 'POST',
-        url: 'http://localhost:8080/cart_jewelry/'+jewelryId+'/1',
+        url: 'https://prac-marketplace.onrender.com/cart_jewelry/'+jewelryId+'/1',
         headers: {
           Authorization: `Bearer ${token}`
         },
