@@ -1,7 +1,7 @@
 import axios from "axios";
 let token = localStorage.getItem("jwt-token")
 
-const REST_API_BASE_URL = 'http://localhost:8080/cart_jewelry'
+const REST_API_BASE_URL = 'https://prac-marketplace.onrender.com/cart_jewelry'
 
 let axiosConfig = {
   headers: {
@@ -21,7 +21,7 @@ export const listJewelryCart =  async () => {
 
 export const statsJewelry = () => {
 	
-	return axios.get('http://localhost:8080/cart_jewelry/stats', {
+	return axios.get('https://prac-marketplace.onrender.com/cart_jewelry/stats', {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -30,7 +30,7 @@ export const statsJewelry = () => {
 
 export const addJewelry = (jewelryId) => {
 	console.log(jewelryId + " add");
-	console.log('http://localhost:8080/cart_jewelry/'+jewelryId+'/1');
+	console.log('https://prac-marketplace.onrender.com/cart_jewelry/'+jewelryId+'/1');
 	
 	return axios({
         method: 'POST',
@@ -41,7 +41,7 @@ export const addJewelry = (jewelryId) => {
         data: ""
       })
 	
-	return axios.post('http://localhost:8080/cart_jewelry/'+jewelryId+'/1', {
+	return axios.post('https://prac-marketplace.onrender.com/cart_jewelry/'+jewelryId+'/1', {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -51,7 +51,7 @@ export const addJewelry = (jewelryId) => {
 export const orderJewelry = () => {
 	console.log("posting");
 	
-	return axios.delete('http://localhost:8080/cart_jewelry/make', {
+	return axios.delete('https://prac-marketplace.onrender.com/cart_jewelry/make', {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -59,7 +59,7 @@ export const orderJewelry = () => {
 }
 
 export const deleteJewelryById = (id) => {
-	return axios.delete('http://localhost:8080/cart_jewelry/'+id, {
+	return axios.delete('https://prac-marketplace.onrender.com/cart_jewelry/'+id, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
