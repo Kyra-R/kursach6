@@ -12,7 +12,7 @@ $(document).ready(function () {
 		} else {
 		
         $.ajax({
-            url: 'http://localhost:8081/auth/login',
+            url: 'https://security-jewelry.onrender.com/auth/login',
             type: 'POST',
             data: JSON.stringify({
                 login: $("#login_username").val(),
@@ -42,7 +42,7 @@ $(document).ready(function () {
 		console.log("register")
         event.preventDefault();
         $.ajax({
-            url: 'http://localhost:8081/auth/registration',
+            url: 'https://security-jewelry.onrender.com/auth/registration',
             type: 'POST',
             data: JSON.stringify({
                 login: $("#register_username").val(),
